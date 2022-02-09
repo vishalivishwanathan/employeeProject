@@ -45,6 +45,9 @@
       "northwind": {
         "kind": "odata-v2",
         "model": "srv/external/northwind"
+      },
+      "db": {
+        "kind": "hana"
       }
     }
   }

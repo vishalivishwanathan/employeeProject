@@ -4,12 +4,14 @@ module.exports = async (srv) => {
     const { Employees } = cds.entities('com.employees');
 
     srv.on("READ", "Employees", async(req, res) => {
+        
         const tx = cds.transaction(req);
 
         const result = await tx.run(
             
-           UPDATE(Employees).set({ NAME: 'Mohan' }).where({ ID: 1 })
+          // UPDATE(Employees).set({ Name: 'Mohan' }).where({ ID: 1 })
            //SELECT.from(Employees).where({ID : 1})
+           INSERT.into (Employees).entries ({ID:4,Name:'idk',Age:'30'})
         )
         return result;
     }),

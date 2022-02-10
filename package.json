@@ -1,63 +1,63 @@
 {
-    "name": "employeesProject",
-    "version": "1.0.0",
-    "description": "A simple CAP project.",
-    "repository": "<Add your repository here>",
-    "license": "UNLICENSED",
-    "private": true,
-    "dependencies": {
-        "@sap/cds": "^5",
-        "@sap/hana-client": "^2.7.21",
-        "@sap/textbundle": "^3.1.0",
-        "@sap/xsenv": "^3.1.0",
-        "@sap/xssec": "^3.1.2",
-        "express": "^4.17.1",
-        "hdb": "^0.19.0"
+  "name": "employeesProject",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^5",
+    "@sap/hana-client": "^2.11.14",
+    "@sap/textbundle": "^3.1.0",
+    "@sap/xsenv": "^3.1.0",
+    "@sap/xssec": "^3.1.2",
+    "express": "^4.17.1",
+    "hdb": "^0.19.1"
+  },
+  "devDependencies": {
+    "@sap/hdi-deploy": "4.2.3",
+    "sqlite3": "^5.0.2"
+  },
+  "scripts": {
+    "start": "cds run"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2020": true,
+      "node": true,
+      "jest": true,
+      "mocha": true
     },
-    "devDependencies": {
-        "sqlite3": "^5.0.2",
-        "@sap/hdi-deploy": "4.0.4"
+    "globals": {
+      "SELECT": true,
+      "INSERT": true,
+      "UPDATE": true,
+      "DELETE": true,
+      "CREATE": true,
+      "DROP": true,
+      "CDL": true,
+      "CQL": true,
+      "CXL": true,
+      "cds": true
     },
-    "scripts": {
-        "start": "cds run"
-    },
-    "eslintConfig": {
-        "extends": "eslint:recommended",
-        "env": {
-            "es2020": true,
-            "node": true,
-            "jest": true,
-            "mocha": true
-        },
-        "globals": {
-            "SELECT": true,
-            "INSERT": true,
-            "UPDATE": true,
-            "DELETE": true,
-            "CREATE": true,
-            "DROP": true,
-            "CDL": true,
-            "CQL": true,
-            "CXL": true,
-            "cds": true
-        },
-        "rules": {
-            "no-console": "off",
-            "require-atomic-updates": "off"
-        }
-    },
-    "cds": {
-        "requires": {
-            "northwind": {
-                "kind": "odata-v2",
-                "model": "srv/external/northwind"
-            }
-        },
-        "db": {
-            "kind": "hana"
-        },
-        "hana": {
-            "deploy-format": "hdbtable"
-        }
+    "rules": {
+      "no-console": "off",
+      "require-atomic-updates": "off"
     }
+  },
+  "cds": {
+    "requires": {
+      "northwind": {
+        "kind": "odata-v2",
+        "model": "srv/external/northwind"
+      },
+      "db": {
+        "kind": "hana"
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    }
+  }
 }

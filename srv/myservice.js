@@ -14,7 +14,7 @@ module.exports = async (srv) => {
         const result = await tx.run(
 
             // UPDATE(Employees).set({ Name: 'Man' }).where({ ID: 1 })
-            //SELECT.from(Employees).where({ID : 1})
+            SELECT.from(Employees).where({ID : 1})
             //INSERT.into(Employees).entries({ ID: 4, Name: 'idk', Age: '30' })
         )
         return result;

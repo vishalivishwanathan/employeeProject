@@ -4,7 +4,7 @@ using {northwind as external} from './external/northwind';
 service EmployeeService {
 
     // defining Entity
-    entity Employees as projection on datamodel.Employees;
+    entity Employees as select from datamodel.Employees;
     // Defining Functions
     function functionCall(param : String(10)) returns String;
     // Defining Actions

@@ -31,3 +31,7 @@ mta_archives/
 
 # auto generated wildcard
 employeesProject/.env1
+# auto generated wildcard
+employeesProject/gen/db/.env
+# auto generated wildcard
+employeesProject/gen/db/.env

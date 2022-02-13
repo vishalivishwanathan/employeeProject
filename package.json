@@ -12,7 +12,8 @@
     "@sap/xsenv": "^3.1.0",
     "@sap/xssec": "^3.1.2",
     "express": "^4.17.1",
-    "hdb": "^0.19.1"
+    "hdb": "^0.19.1",
+    "sap-cf-axios": "^0.2.35"
   },
   "devDependencies": {
     "@sap/hdi-deploy": "4.2.3",
@@ -54,6 +55,12 @@
       },
       "db": {
         "kind": "hana"
+      },
+      "dest": {
+        "kind": "odata",
+        "credentials": {
+          "destination": "YOUR_DEST_NAME"
+        }
       }
     },
     "hana": {

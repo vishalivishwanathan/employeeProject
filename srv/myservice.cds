@@ -1,5 +1,4 @@
 using com.employees as datamodel from '../db/data-model';
-using {northwind as external} from './external/northwind';
 
 service EmployeeService{ 
 
@@ -18,11 +17,5 @@ service EmployeeService{
     }
     
 
-    //Defining external service
-    entity Customers as
-        select
-            key CustomerID,
-                CompanyName,
-                ContactName
-        from external.Customers;
+  
 }
